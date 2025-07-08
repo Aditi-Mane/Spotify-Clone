@@ -1,5 +1,8 @@
 import express from 'express'
 import dotenv from 'dotenv'
+
+import { connectDB } from './lib/db.js'
+
 import userRoutes from './routes/user.route.js'
 import adminRoutes from './routes/user.admin.js'
 import songRoutes from './routes/user.songs.js'
@@ -21,5 +24,5 @@ app.use('/api/auth',authRoutes)
 
 app.listen(PORT,()=>{
   console.log('Server running at '+PORT);
-  
+  connectDB();
 })
