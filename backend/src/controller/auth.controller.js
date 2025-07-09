@@ -18,6 +18,6 @@ export const authController = async (req,res)=>{
 
   } catch (error) {
     console.log('Error in auth callback',error);
-    res.status(500).json({success:false})
+    res.status(500).json({message:'Invalid user',error})
   }
 }
