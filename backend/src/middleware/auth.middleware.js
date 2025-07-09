@@ -1,6 +1,6 @@
 import { clerkClient } from "@clerk/express";
 
-export const isloggedin = async (req,res,next)=>{
+export const isLoggedIn = async (req,res,next)=>{
   if(!req.auth.userId){
     return res.status(401).json({message:'Unauthorized access - User is not logged in'});
   }
