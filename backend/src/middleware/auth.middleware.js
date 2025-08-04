@@ -15,10 +15,9 @@ export const isAdmin = async (req, res, next) => {
     if (process.env.ADMIN_EMAIL !== email) {
       return res.status(403).json({ message: 'Unauthorized access - User is not admin' });
     }
-
     next();
   } catch (error) {
     console.error('Error in isAdmin middleware:', error);
-    res.status(500).json({ message: 'Server error verifying admin access' });
+    next(error);
   }
 };
