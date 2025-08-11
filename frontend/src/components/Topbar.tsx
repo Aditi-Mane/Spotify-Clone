@@ -7,7 +7,7 @@ const Topbar = () => {
   const admin = false;
   return (
     <>
-    <div className="topbar border-2 top-0 flex items-center justify-between p-4 sticky rounded-[5px] bg-zinc-900/75">
+    <div className="topbar top-0 flex items-center justify-between px-4 py-3.5 sticky rounded-[10px] bg-zinc-900/75">
      
       <div className="left_topbar flex gap-1 items-center justify-center">
         <img width="30px" src="/logo.png" alt="Spotify_logo"/>

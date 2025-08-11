@@ -16,7 +16,7 @@ const GoogleLogin = () => {
     })
   }
 
-  return <Button onClick={signInWithGoogle} variant={"secondary"} className="w-full border-zinc-200 h-11 text-white">
+  return <Button onClick={signInWithGoogle} variant={"secondary"} className="w-full border-zinc-200 h-10 text-white">
     Continue with Google
   </Button>
 }

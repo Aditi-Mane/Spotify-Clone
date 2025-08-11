@@ -1,9 +1,11 @@
 //import React from 'react'
 
+import Topbar from "@/components/Topbar"
+
 const HomePage = () => {
   return (
     <div>
-      hello I am Homepage
+      <Topbar/>
     </div>
   )
 }
