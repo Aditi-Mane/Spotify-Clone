@@ -1,31 +1,35 @@
-import { SignedIn, SignedOut, SignOutButton } from "@clerk/clerk-react";
+import { SignedOut, UserButton } from "@clerk/clerk-react";
 import { LayoutDashboardIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 import GoogleLogin from "./GoogleLogin";
+import { useAuthStore } from "@/stores/useAuthStore";
+import { buttonVariants } from "./ui/button";
+import { cn } from "@/lib/utils";
 
 const Topbar = () => {
-  const admin = false;
+  const {admin} = useAuthStore();
+  console.log({ admin })
   return (
     <>
-    <div className="topbar top-0 flex items-center justify-between px-4 py-3.5 sticky rounded-[10px] bg-zinc-900/75">
+    <div className="topbar top-0 flex items-center justify-between px-4 py-3.5 sticky bg-zinc-900/75">
      
       <div className="left_topbar flex gap-1 items-center justify-center">
         <img width="30px" src="/logo.png" alt="Spotify_logo"/>
         <div className="text-1.5xl">Spotify</div>
       </div>
-      <div className="right_topbar">
-        {admin && (
-          <Link to={"/admin"}>
-            <LayoutDashboardIcon className="size-4 border-4 mr-2"/>
-            Admin Dashboard
-          </Link>
-        )}
-        <SignedIn>
-          <SignOutButton/>
-        </SignedIn>
+      <div className='flex items-center gap-4'>
+				{admin && (
+					<Link to={"/admin"} className={cn(buttonVariants({ variant: "outline" }))}>
+						<LayoutDashboardIcon className='size-4  mr-2' />
+						Admin Dashboard
+					</Link>
+				)}
+        
         <SignedOut>
           <GoogleLogin/>
         </SignedOut>
+
+        <UserButton/>
       </div>
     </div>
     </>
