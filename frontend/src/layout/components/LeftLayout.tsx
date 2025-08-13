@@ -56,7 +56,7 @@ const LeftLayout = () => {
       </div>
       
       {/* Library section */}
-			<div className='flex-1 h-[80vh] rounded-lg bg-zinc-900 p-4 mt-2 '>
+			<div className='flex-1 h-[calc(100vh-180px)] rounded-lg bg-zinc-900 p-4 mt-2 '>
 				<div className='flex items-center justify-between mb-4'>
 					<div className='flex items-center text-white px-2'>
 						<Library className='size-5 mr-2' />
