@@ -1,4 +1,6 @@
 export interface Song {
+	releaseYear: ReactNode;
+	songs: any;
 	_id: string;
 	title: string;
 	artist: string;
@@ -11,6 +13,8 @@ export interface Song {
 }
 
 export interface Album {
+	createdAt: any;
+  albumId: string | undefined;
 	_id: string;
 	title: string;
 	artist: string;
