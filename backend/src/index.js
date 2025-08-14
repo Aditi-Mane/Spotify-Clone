@@ -27,6 +27,11 @@ const PORT=process.env.PORT;
 const httpServer = createServer(app);
 initializeSocket(httpServer)
 
+app._router?.stack?.forEach((layer) => {
+  if (layer.route) console.log("Route:", layer.route.path);
+  else if (layer.name === "router") console.log("Router middleware:", layer.regexp);
+});
+
 app.use(
 	cors({
 		origin: "http://localhost:3000",
