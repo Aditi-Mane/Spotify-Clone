@@ -2,6 +2,9 @@
 
 A **Spotify Realtime Clone** that **combines music streaming, social interaction**, and **admin control**. 
 
+## Live Demo
+Check out the live application [here](https://spotify-realtime-clone.onrender.com/).
+
 ## Key Features
 
 ### 🎵 Music Playback
