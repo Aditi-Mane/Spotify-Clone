@@ -29,8 +29,8 @@ Check out the live application [here](https://spotify-realtime-clone.onrender.co
 ## Tech-Stack Used 
 
 
-- **Frontend:** React.js, Zustand (state management), Axios (API requests)  
-- **Backend:** Node.js, Express.js  
+- **Frontend:** Typescript, React.js, Zustand (state management), Axios (API requests), Shadcn (UI)
+- **Backend:** Javascript, Node.js, Express.js  
 - **Database:** MongoDB (Mongoose)  
 - **Real-time Communication:** Socket.IO  
 - **Authentication:** Clerk (user signup, login)  
